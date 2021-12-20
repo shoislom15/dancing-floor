@@ -1,0 +1,45 @@
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #201B18;
+}
+
+.container {
+  height: 70vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+.container #scoreup {
+  margin-bottom: 0;
+}
+.container .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.container .buttons .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.container .buttons .row button {
+  height: 90px;
+  width: 90px;
+  background-color: #423C3C;
+  border: none;
+  border-radius: 10px;
+}
+.container .buttons .row .red {
+  background-color: red;
+}
+
+/*# sourceMappingURL=main.css.map */

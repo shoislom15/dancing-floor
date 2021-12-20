@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press color</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Score: <span id="scoreup">0</span></h3>
+        <div class="buttons">
+            <div class="row">
+                <button onclick="press(0)"></button>
+                <button onclick="press(1)"></button>
+                <button onclick="press(2)"></button>
+                <button onclick="press(3)"></button>
+                <button onclick="press(4)"></button>
+            </div>
+            <div class="row">
+                <button onclick="press(5)"></button>
+                <button onclick="press(6)"></button>
+                <button onclick="press(7)"></button>
+                <button onclick="press(8)"></button>
+                <button onclick="press(9)"></button>
+            </div>
+            <div class="row">
+                <button onclick="press(10)"></button>
+                <button onclick="press(11)"></button>
+                <button onclick="press(12)"></button>
+                <button onclick="press(13)"></button>
+                <button onclick="press(14)"></button>
+            </div>
+            <div class="row">
+                <button onclick="press(15)"></button>
+                <button onclick="press(16)"></button>
+                <button onclick="press(17)"></button>
+                <button onclick="press(18)"></button>
+                <button onclick="press(19)"></button>
+            </div>
+            <div class="row">
+                <button onclick="press(20)"></button>
+                <button onclick="press(21)"></button>
+                <button onclick="press(22)"></button>
+                <button onclick="press(23)"></button>
+                <button onclick="press(24)"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        const scoreup = document.getElementById("scoreup");
+        const button = document.getElementsByTagName("button");
+        console.log(button);
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+        setInterval(() => {
+            let a = rand(0, 24);
+            let b = rand(0, 24);
+            let c = rand(0, 24);
+            let d = rand(0, 24);
+            let f = rand(0, 24);
+
+            button[a].classList.add("red");
+            button[b].classList.add("red");
+            button[c].classList.add("red");
+            button[d].classList.add("red");
+            button[f].classList.add("red");
+            setTimeout(swithOff(a, b, c, d), 100)
+        }, 500)
+
+        function press(a) {
+            if (button[a].classList.contains("red")) score++;
+            button[a].classList.remove("red");
+            scoreup.innerHTML = score;
+        }
+
+
+        const swithOff = (a, b, c, d) => {
+            button[a].classList.remove("red");
+            button[b].classList.remove("red");
+            button[c].classList.remove("red");
+            button[d].classList.remove("red");
+            button[f].classList.remove("red");
+        }
+    </script>
+</body>
+
+</html>
