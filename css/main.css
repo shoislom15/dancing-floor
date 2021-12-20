@@ -41,5 +41,17 @@ body {
 .container .buttons .row .red {
   background-color: red;
 }
+.container .buttons .row .blue {
+  background-color: blue;
+}
+.container .buttons .row .green {
+  background-color: #00d800;
+}
+.container .buttons .row .yellow {
+  background-color: yellow;
+}
+.container .buttons .row .orange {
+  background-color: orange;
+}
 
 /*# sourceMappingURL=main.css.map */
